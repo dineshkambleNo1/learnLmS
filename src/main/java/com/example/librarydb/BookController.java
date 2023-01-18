@@ -28,5 +28,11 @@ public class BookController {
         }
     }
 
+    @PutMapping("/update_pages")
+    public void updatePages(@RequestBody()UpdateBookPages updateBookPages)
+    {
+        bookService.updateBookPages(updateBookPages);
+    }
+
 
 }

@@ -14,9 +14,7 @@ public class BookService {
 
     public void createBook(Book book) throws Exception{
 
-        if(bookRepository.findById(book.getId()).get()!= null){
-            throw new Exception("Book is already present");
-        }
+
         bookRepository.save(book);
     }
 
@@ -26,5 +24,18 @@ public class BookService {
         System.out.println(book.getName());
 
         return book;
+    }
+
+
+    public void updateBookPages(UpdateBookPages updateBookPages) {
+        // we need to enter an object
+
+        int id = updateBookPages.getId();
+
+        Book bookToBUpdated = bookRepository.findById(id).get();
+
+        bookToBUpdated.setPages(updateBookPages.getPages());
+
+        bookRepository.save(bookToBUpdated);
     }
 }
