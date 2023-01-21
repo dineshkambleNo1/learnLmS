@@ -1,5 +1,6 @@
 package com.example.librarydb;
 
+import com.example.librarydb.Models.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

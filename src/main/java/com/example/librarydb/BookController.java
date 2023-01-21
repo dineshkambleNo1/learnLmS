@@ -1,5 +1,6 @@
 package com.example.librarydb;
 
+import com.example.librarydb.Models.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +11,7 @@ public class BookController {
     BookService bookService;
 
     @PostMapping("/add_book")
-    public void addBook(@RequestBody()Book book){
+    public void addBook(@RequestBody() Book book){
         try {
             bookService.createBook(book);
         } catch (Exception e) {
@@ -33,6 +34,8 @@ public class BookController {
     {
         bookService.updateBookPages(updateBookPages);
     }
+
+
 
 
 }

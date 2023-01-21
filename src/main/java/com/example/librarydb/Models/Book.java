@@ -1,4 +1,4 @@
-package com.example.librarydb;
+package com.example.librarydb.Models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "book_table")
+@Table(name = "books")
 public class Book {
     @Id
     private int id;
