@@ -10,7 +10,7 @@ public class BookController {
     @Autowired
     BookService bookService;
 
-    @PostMapping("/add_book")
+        @PostMapping("/add_book")
     public void addBook(@RequestBody() Book book){
         try {
             bookService.createBook(book);
